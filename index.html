@@ -153,10 +153,9 @@ Bangladesh</textarea></div>
 
       <div class="section">
         <div class="section-title">Client</div>
-        <div class="field"><label>Client name</label><input type="text" id="toName" value="Bizzmakr" oninput="update()"></div>
-        <div class="field"><label>Address</label><textarea id="toAddress" rows="2" oninput="update()">House#197, Smith Road, Puratan Kasha, Jashore,
-Bangladesh</textarea></div>
-        <div class="field"><label>Email</label><input type="text" id="toEmail" value="info@bizzmakr.com" oninput="update()"></div>
+        <div class="field"><label>Client name</label><input type="text" id="toName" value="****" oninput="update()"></div>
+        <div class="field"><label>Address</label><textarea id="toAddress" rows="2" oninput="update()"></textarea></div>
+        <div class="field"><label>Email</label><input type="text" id="toEmail" value="" oninput="update()"></div>
       </div>
 
       <div class="section">
@@ -223,7 +222,7 @@ Bangladesh</textarea></div>
           </div>
           <div>
             <div class="inv-lbl">Billed to</div>
-            <div class="party-name" id="p-toName">Bizzmakr</div>
+            <div class="party-name" id="p-toName">****</div>
             <div class="party-detail" id="p-toDetail"></div>
           </div>
         </div>
@@ -257,12 +256,13 @@ Bangladesh</textarea></div>
 
 <script>
 let items = [
-  { title: 'AMC Payment For July Month, 2026', desc: 'Bizzmakr maintenance support', amount: '45000' },
+  { title: 'AMC Payment For July Month, 2026', desc: '', amount: '****' },
 ];
 let logoDataURL = null;
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function nl2br(s){return esc(s).replace(/\n/g,'<br>');}
+function isNum(v){return v!==''&&v!=null&&!isNaN(parseFloat(v))&&isFinite(v);}
 function fmt(n,sym){return sym+parseFloat(n||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function fmtDate(v){if(!v)return '';const d=new Date(v+'T00:00:00');return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
 
@@ -309,7 +309,7 @@ function renderItems(){
       <button class="item-remove" onclick="removeItem(${i})">×</button>
       <div class="field"><label>Service title</label><input type="text" value="${esc(item.title)}" oninput="items[${i}].title=this.value;updatePreview()"></div>
       <div class="field"><label>Description (optional)</label><input type="text" value="${esc(item.desc)}" oninput="items[${i}].desc=this.value;updatePreview()"></div>
-      <div class="field"><label>Amount</label><input type="number" value="${item.amount}" min="0" step="0.01" oninput="items[${i}].amount=this.value;updatePreview()"></div>`;
+      <div class="field"><label>Amount</label><input type="text" inputmode="decimal" value="${esc(item.amount)}" oninput="items[${i}].amount=this.value;updatePreview()"></div>`;
     list.appendChild(div);
   });
 }
@@ -331,14 +331,14 @@ function updatePreview(){
   document.getElementById('p-toName').textContent=document.getElementById('toName').value;
   const ta=document.getElementById('toAddress').value, te=document.getElementById('toEmail').value;
   document.getElementById('p-toDetail').innerHTML=nl2br(ta)+(te?'<br>'+esc(te):'');
-  const tbody=document.getElementById('p-items'); tbody.innerHTML=''; let total=0;
+  const tbody=document.getElementById('p-items'); tbody.innerHTML=''; let total=0, masked=false;
   items.forEach(item=>{
-    const amt=parseFloat(item.amount||0); total+=amt;
+    const num=isNum(item.amount), amt=num?parseFloat(item.amount):0; total+=amt; if(!num&&item.amount) masked=true;
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td>${esc(item.title)}${item.desc?'<div class="sub">'+esc(item.desc)+'</div>':''}</td><td class="r">${fmt(amt,sym)}</td>`;
+    tr.innerHTML=`<td>${esc(item.title)}${item.desc?'<div class="sub">'+esc(item.desc)+'</div>':''}</td><td class="r">${num||!item.amount?fmt(amt,sym):sym+esc(item.amount)}</td>`;
     tbody.appendChild(tr);
   });
-  const ts=fmt(total,sym);
+  const ts=masked?sym+'****':fmt(total,sym);
   document.getElementById('p-total').textContent=ts;
   document.getElementById('p-total2').textContent=ts;
   const pm=document.getElementById('payMethod').value, pr=document.getElementById('payRef').value;
@@ -395,9 +395,9 @@ function resetForm(){
   document.getElementById('fromAddress').value='House#53/A, Sector-8, Uttara, Dhaka-1230,\nBangladesh';
   document.getElementById('fromEmail').value='info@coderstream.net';
   document.getElementById('fromContact').value='coderstream.net';
-  document.getElementById('toName').value='Bizzmakr';
-  document.getElementById('toAddress').value='House#197, Smith Road, Puratan Kasha, Jashore,\nBangladesh';
-  document.getElementById('toEmail').value='info@bizzmakr.com';
+  document.getElementById('toName').value='****';
+  document.getElementById('toAddress').value='';
+  document.getElementById('toEmail').value='';
   document.getElementById('invoiceNo').value='INV-2026-0801';
   document.getElementById('currency').value='BDT';
   document.getElementById('payMethod').value='City Bank Transfer';
@@ -405,7 +405,7 @@ function resetForm(){
   document.getElementById('issueDate').value='2026-08-01';
   document.getElementById('paymentDate').value='2026-08-08';
   items=[
-    { title: 'AMC Payment For July Month, 2026', desc: 'Bizzmakr maintenance support', amount: '45000' },
+    { title: 'AMC Payment For July Month, 2026', desc: '', amount: '****' },
   ];
   renderItems(); updatePreview();
 }
