@@ -32,7 +32,7 @@ The libraries and font are loaded from CDNs, so an internet connection is requir
 ## Customizing
 
 - **Default values** (company, client, items, dates) are set in the form field `value` attributes, the `items` array at the top of the script, and the `resetForm()` function. Update all three to change the defaults.
-- **Default logo** is embedded as a base64 JPEG (`DEFAULT_LOGO_JPG`); its white background is made transparent at load time.
+- **Default logo** is embedded as a base64 PNG (`DEFAULT_LOGO`) and loaded on startup and on reset. Replace that string to change it.
 - **Colors** are defined as CSS variables in `:root` (`--navy`, `--green`, etc.) and in the `.inv-*` invoice styles.
 - **Invoice wording** (the "Payment Received" badge, "Total paid" label and thank-you note) lives in the invoice markup in `index.html`.
 
