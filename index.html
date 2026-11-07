@@ -140,33 +140,33 @@ body { font-family: var(--font); background: var(--bg); color: var(--text); }
           <input type="file" id="logoInput" accept="image/*" onchange="handleLogo(event)">
         </div>
         <div class="field-row">
-          <div class="field"><label>Company name</label><input type="text" id="fromName" value="NovaTech Solutions" oninput="update()"></div>
-          <div class="field"><label>Tagline</label><input type="text" id="fromTagline" value="Software & Digital Services" oninput="update()"></div>
+          <div class="field"><label>Company name</label><input type="text" id="fromName" value="Coderstream" oninput="update()"></div>
+          <div class="field"><label>Tagline</label><input type="text" id="fromTagline" value="Software Development & IT Services" oninput="update()"></div>
         </div>
-        <div class="field"><label>Address</label><textarea id="fromAddress" rows="2" oninput="update()">123 Tech Park, Floor 4
-Dhaka, Bangladesh</textarea></div>
+        <div class="field"><label>Address</label><textarea id="fromAddress" rows="2" oninput="update()">House#53/A, Sector-8, Uttara, Dhaka-1230,
+Bangladesh</textarea></div>
         <div class="field-row">
-          <div class="field"><label>Email</label><input type="text" id="fromEmail" value="billing@novatech.io" oninput="update()"></div>
-          <div class="field"><label>Website / Phone (footer)</label><input type="text" id="fromContact" value="novatech.io · +880 1700-000000" oninput="update()"></div>
+          <div class="field"><label>Email</label><input type="text" id="fromEmail" value="info@coderstream.net" oninput="update()"></div>
+          <div class="field"><label>Website / Phone (footer)</label><input type="text" id="fromContact" value="coderstream.net • +880 1777-480616" oninput="update()"></div>
         </div>
       </div>
 
       <div class="section">
         <div class="section-title">Client</div>
-        <div class="field"><label>Client name</label><input type="text" id="toName" value="Acme Corporation Ltd." oninput="update()"></div>
-        <div class="field"><label>Address</label><textarea id="toAddress" rows="2" oninput="update()">45 Business Avenue
-Dhaka, Bangladesh</textarea></div>
-        <div class="field"><label>Email</label><input type="text" id="toEmail" value="accounts@acmecorp.com" oninput="update()"></div>
+        <div class="field"><label>Client name</label><input type="text" id="toName" value="Bizzmakr" oninput="update()"></div>
+        <div class="field"><label>Address</label><textarea id="toAddress" rows="2" oninput="update()">House#197, Smith Road, Puratan Kasha, Jashore,
+Bangladesh</textarea></div>
+        <div class="field"><label>Email</label><input type="text" id="toEmail" value="info@bizzmakr.com" oninput="update()"></div>
       </div>
 
       <div class="section">
         <div class="section-title">Invoice Details</div>
         <div class="field-row3">
-          <div class="field"><label>Invoice no.</label><input type="text" id="invoiceNo" value="INV-2026-0047" oninput="update()"></div>
+          <div class="field"><label>Invoice no.</label><input type="text" id="invoiceNo" value="INV-2026-0801" oninput="update()"></div>
           <div class="field"><label>Issue date</label><input type="date" id="issueDate" oninput="update()"></div>
           <div class="field"><label>Payment date</label><input type="date" id="paymentDate" oninput="update()"></div>
         </div>
-        <div class="field" style="width:33%"><label>Currency symbol</label><input type="text" id="currency" value="$" oninput="update()"></div>
+        <div class="field" style="width:33%"><label>Currency symbol</label><input type="text" id="currency" value="BDT" oninput="update()"></div>
       </div>
 
       <div class="section">
@@ -178,8 +178,8 @@ Dhaka, Bangladesh</textarea></div>
       <div class="section">
         <div class="section-title">Payment</div>
         <div class="field-row">
-          <div class="field"><label>Payment method</label><input type="text" id="payMethod" value="Bank Transfer" oninput="update()"></div>
-          <div class="field"><label>Transaction reference</label><input type="text" id="payRef" value="TXN-8821-XK" oninput="update()"></div>
+          <div class="field"><label>Payment method</label><input type="text" id="payMethod" value="City Bank Transfer" oninput="update()"></div>
+          <div class="field"><label>Transaction reference</label><input type="text" id="payRef" value="21835******001" oninput="update()"></div>
         </div>
       </div>
 
@@ -197,9 +197,9 @@ Dhaka, Bangladesh</textarea></div>
           <div class="inv-header-left">
             <img id="p-logoImg" src="" alt="Logo">
             <div id="p-logoIcon" class="inv-logo-icon">▣</div>
-            <div class="inv-logo-name" id="p-fromName">NovaTech Solutions</div>
+            <div class="inv-logo-name" id="p-fromName">Coderstream</div>
           </div>
-          <div class="inv-logo-sub" id="p-fromTagline">Software &amp; Digital Services</div>
+          <div class="inv-logo-sub" id="p-fromTagline">Software Development &amp; IT Services</div>
         </div>
         <div class="inv-badge">✓ Payment Received</div>
       </div>
@@ -207,7 +207,7 @@ Dhaka, Bangladesh</textarea></div>
         <div class="inv-meta-row">
           <div>
             <div class="inv-lbl">Receipt / Invoice no.</div>
-            <div class="inv-val" id="p-invoiceNo">#INV-2026-0047</div>
+            <div class="inv-val" id="p-invoiceNo">#INV-2026-0801</div>
           </div>
           <div class="inv-meta-right">
             <div class="inv-lbl">Issue date</div>
@@ -218,12 +218,12 @@ Dhaka, Bangladesh</textarea></div>
         <div class="inv-parties">
           <div>
             <div class="inv-lbl">From</div>
-            <div class="party-name" id="p-fromName2">NovaTech Solutions</div>
+            <div class="party-name" id="p-fromName2">Coderstream</div>
             <div class="party-detail" id="p-fromDetail"></div>
           </div>
           <div>
             <div class="inv-lbl">Billed to</div>
-            <div class="party-name" id="p-toName">Acme Corporation Ltd.</div>
+            <div class="party-name" id="p-toName">Bizzmakr</div>
             <div class="party-detail" id="p-toDetail"></div>
           </div>
         </div>
@@ -233,23 +233,23 @@ Dhaka, Bangladesh</textarea></div>
         </table>
         <div class="inv-total-row">
           <span class="inv-total-label">Total paid</span>
-          <span class="inv-total-amt" id="p-total">$0.00</span>
+          <span class="inv-total-amt" id="p-total">BDT0.00</span>
         </div>
         <div class="inv-pay-box">
           <div class="inv-pay-left">
             <div class="inv-dot"></div>
             <div>
               <div class="inv-pay-label">Payment confirmed</div>
-              <div class="inv-pay-sub" id="p-payInfo">Bank Transfer · Ref: TXN-8821-XK</div>
+              <div class="inv-pay-sub" id="p-payInfo">City Bank Transfer · Ref: 21835******001</div>
             </div>
           </div>
-          <div class="inv-pay-amt" id="p-total2">$0.00</div>
+          <div class="inv-pay-amt" id="p-total2">BDT0.00</div>
         </div>
         <div class="inv-note">Thank you for your payment. This document serves as an official confirmation that the above amount has been received in full. Please retain this receipt for your records.</div>
       </div>
       <div class="inv-footer">
-        <div class="inv-footer-txt" id="p-footerLeft">novatech.io · +880 1700-000000</div>
-        <div class="inv-footer-txt" id="p-footerRight">billing@novatech.io</div>
+        <div class="inv-footer-txt" id="p-footerLeft">coderstream.net • +880 1777-480616</div>
+        <div class="inv-footer-txt" id="p-footerRight">info@coderstream.net</div>
       </div>
     </div>
   </div>
@@ -257,9 +257,7 @@ Dhaka, Bangladesh</textarea></div>
 
 <script>
 let items = [
-  { title: 'Web Application Development', desc: 'Custom dashboard & admin panel (Phase 1)', amount: '2500' },
-  { title: 'API Integration', desc: 'Third-party payment gateway & CRM sync', amount: '800' },
-  { title: 'Monthly Maintenance & Support', desc: 'May 2026 — bug fixes, updates, uptime monitoring', amount: '200' },
+  { title: 'AMC Payment For July Month, 2026', desc: 'Bizzmakr maintenance support', amount: '45000' },
 ];
 let logoDataURL = null;
 
@@ -268,21 +266,39 @@ function nl2br(s){return esc(s).replace(/\n/g,'<br>');}
 function fmt(n,sym){return sym+parseFloat(n||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
 function fmtDate(v){if(!v)return '';const d=new Date(v+'T00:00:00');return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
 
+function applyLogo(dataURL,name){
+  logoDataURL=dataURL;
+  const thumb=document.getElementById('logoThumb');
+  thumb.src=dataURL; thumb.style.display='block';
+  document.getElementById('logoPlaceholder').style.display='none';
+  document.getElementById('logoUploadLabel').textContent=name;
+  document.getElementById('logoRemoveBtn').style.display='inline-block';
+  const img=document.getElementById('p-logoImg');
+  img.src=dataURL; img.style.display='block';
+  document.getElementById('p-logoIcon').style.display='none';
+}
 function handleLogo(e){
   const file=e.target.files[0]; if(!file)return;
   const reader=new FileReader();
-  reader.onload=function(ev){
-    logoDataURL=ev.target.result;
-    const thumb=document.getElementById('logoThumb');
-    thumb.src=logoDataURL; thumb.style.display='block';
-    document.getElementById('logoPlaceholder').style.display='none';
-    document.getElementById('logoUploadLabel').textContent=file.name;
-    document.getElementById('logoRemoveBtn').style.display='inline-block';
-    const img=document.getElementById('p-logoImg');
-    img.src=logoDataURL; img.style.display='block';
-    document.getElementById('p-logoIcon').style.display='none';
-  };
+  reader.onload=function(ev){ applyLogo(ev.target.result,file.name); };
   reader.readAsDataURL(file);
+}
+// Default Coderstream logo (JPEG with white background -> white made transparent)
+const DEFAULT_LOGO_JPG='data:image/jpeg;base64,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';
+function loadDefaultLogo(){
+  const im=new Image();
+  im.onload=function(){
+    const c=document.createElement('canvas'); c.width=im.width*4; c.height=im.height*4;
+    const x=c.getContext('2d'); x.imageSmoothingQuality='high'; x.drawImage(im,0,0,c.width,c.height);
+    const d=x.getImageData(0,0,c.width,c.height), a=d.data;
+    for(let i=0;i<a.length;i+=4){
+      const m=Math.min(a[i],a[i+1],a[i+2]);
+      if(m>235) a[i+3]=0; else if(m>180) a[i+3]=Math.round(255*(235-m)/55);
+    }
+    x.putImageData(d,0,0);
+    applyLogo(c.toDataURL('image/png'),'coderstream-logo.png');
+  };
+  im.src=DEFAULT_LOGO_JPG;
 }
 function removeLogo(e){
   e.stopPropagation(); logoDataURL=null;
@@ -385,35 +401,32 @@ async function generatePDF(){
 
 function resetForm(){
   if(!confirm('Reset all fields to defaults?'))return;
-  removeLogo({stopPropagation:()=>{}});
-  document.getElementById('fromName').value='NovaTech Solutions';
-  document.getElementById('fromTagline').value='Software & Digital Services';
-  document.getElementById('fromAddress').value='123 Tech Park, Floor 4\nDhaka, Bangladesh';
-  document.getElementById('fromEmail').value='billing@novatech.io';
-  document.getElementById('fromContact').value='novatech.io · +880 1700-000000';
-  document.getElementById('toName').value='Acme Corporation Ltd.';
-  document.getElementById('toAddress').value='45 Business Avenue\nDhaka, Bangladesh';
-  document.getElementById('toEmail').value='accounts@acmecorp.com';
-  document.getElementById('invoiceNo').value='INV-2026-0047';
-  document.getElementById('currency').value='$';
-  document.getElementById('payMethod').value='Bank Transfer';
-  document.getElementById('payRef').value='TXN-8821-XK';
-  const today=new Date().toISOString().split('T')[0];
-  document.getElementById('issueDate').value=today;
-  document.getElementById('paymentDate').value=today;
+  removeLogo({stopPropagation:()=>{}}); loadDefaultLogo();
+  document.getElementById('fromName').value='Coderstream';
+  document.getElementById('fromTagline').value='Software Development & IT Services';
+  document.getElementById('fromAddress').value='House#53/A, Sector-8, Uttara, Dhaka-1230,\nBangladesh';
+  document.getElementById('fromEmail').value='info@coderstream.net';
+  document.getElementById('fromContact').value='coderstream.net • +880 1777-480616';
+  document.getElementById('toName').value='Bizzmakr';
+  document.getElementById('toAddress').value='House#197, Smith Road, Puratan Kasha, Jashore,\nBangladesh';
+  document.getElementById('toEmail').value='info@bizzmakr.com';
+  document.getElementById('invoiceNo').value='INV-2026-0801';
+  document.getElementById('currency').value='BDT';
+  document.getElementById('payMethod').value='City Bank Transfer';
+  document.getElementById('payRef').value='21835******001';
+  document.getElementById('issueDate').value='2026-08-01';
+  document.getElementById('paymentDate').value='2026-08-08';
   items=[
-    { title: 'Web Application Development', desc: 'Custom dashboard & admin panel (Phase 1)', amount: '2500' },
-    { title: 'API Integration', desc: 'Third-party payment gateway & CRM sync', amount: '800' },
-    { title: 'Monthly Maintenance & Support', desc: 'May 2026 — bug fixes, updates, uptime monitoring', amount: '200' },
+    { title: 'AMC Payment For July Month, 2026', desc: 'Bizzmakr maintenance support', amount: '45000' },
   ];
   renderItems(); updatePreview();
 }
 
-const today=new Date().toISOString().split('T')[0];
-document.getElementById('issueDate').value=today;
-document.getElementById('paymentDate').value=today;
+document.getElementById('issueDate').value='2026-08-01';
+document.getElementById('paymentDate').value='2026-08-08';
 renderItems();
 updatePreview();
+loadDefaultLogo();
 </script>
 </body>
 </html>
